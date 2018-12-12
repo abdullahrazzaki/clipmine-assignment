@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body{
+        display: grid;
+        grid-template-areas: "header"
+        "content"
+        "footer";
+        margin: 0;
+        font-family: 'Karla',serif;
+    }
+    header{
+        grid-area: header;
+    }
+    #nav{
+        padding: 0px 4px;
+        display: flex;
+        align-items: stretch;
+    }
+    #nav > div > span{
+        display: flex;
+        align-items: stretch
+    }
+    #nav .pages{
+        flex:1 0 auto;
+    }
+    #nav  .item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px
+    }
+    main{
+        grid-area: content;
+    }
+    footer{
+        grid-area: footer;
+    }
+    picture,picture img,img{
+        width: 100% !important;
+    }
+    .img-fluid{
+        width: 100%;
+    }
+    .bg-gray{
+        background: #ccc;
+    }
+    .video_actions{
+    margin-top: 10px;
+}
+.video_actions .button{
+    color: aqua;
+    border: 1px solid aqua;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    grid-column-gap: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.row .col{
+    flex: 1 1 0px;
+    margin-top: 1em;
+}
+.col{
+    position: relative;
+}
+.video_thumb,.video_thumb img{
+    width: 100%;
+}
+.text-center{
+    text-align: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#benefits
+{
+    width: minmax(500px,100%);
+}
+.benefit {
+    max-width: 600px;
+    flex: 1 0 100%;
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: minmax(20%,auto) 70%;
+    grid-column-gap: 20px;
+} 
+.benefit-icon{
+    width: 100%;
+ }
+ .overlay{
+    position: absolute; 
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;display:flex;
+    justify-content:center;
+    align-items:center
+ }
+
+ .collection-row{
+     display: grid;
+     color: #fff;
+ }
+ .customer-grid{
+     display: grid;
+     grid-template-columns: repeat(2,auto);
+     grid-column-gap: 5%;
+ }
+  .platforms-row{
+     display: flex;
+   }
+    @media(min-width:768px){
+    main > div{
+        padding: 20px 100px;
+        background: #fff;
+    }
+    .row{
+        grid-template-columns: repeat(3,auto);
+    }
+    .col{
+        display: inline;
+        display: flex;
+        flex-direction: column
+    }
+    .collection-row{
+        grid-template-columns: 40% 40%;
+        grid-gap: 50px 50px;
+        grid-row-gap: 50px
+    }
+    .customer-grid{
+     grid-template-columns: repeat(3,auto);
+     grid-column-gap: 5%;
+ }
+
+    }    
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav id="nav" style="background:#ccc;">
+            <img src="assets/clipmine_logo_beta_226x50.png" style="display:inline; width: auto !important; padding: 8px 4px;;"  />
+            <div style="display:flex;flex:1;">
+            <span class="pages">
+                <span class="item">Home</span>
+                <span class="item">Help<span class="fas fa-search"></span></span>
+                <span class="item">Search<span class="fas fa-arrow-down"></span></span>
+            </span>
+            <span style="justify-self:flex-end">
+                    <span class="item">Blog</span>
+                    <span class="item">Login</span>
+                    <span class="item">Signup</span>
+                
+            </span>
+            </div>
+        </nav>
+        <div id="banner" style="background:black;position: relative;">
+            <picture>
+                <source srcset="assets/top-section_2180x750.jpg">
+                <source media="(min-width: 2181px)" srcset="assets/top-section_4360x1500.jpg">
+                <img src="assets/top-section_2180x750.jpg" alt="Flowers" style="width:100%;">
+            </picture>
+            <div class="overlay">
+                <div style="color:#fff;max-width:50%;text-align: center ">
+                    <h2>A better video experience for the web</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor justo.
+                            Pellentesque porta nulla a scelerisque dignissim. Curabitur pretium euismod nisi at posuere.</p>
+                    <button style="border-radius:10px;background:#428bca">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="videos text-center">
+            <h3 class="text-center">Help your viewers discover what works best for them</h3>
+            <div id="top_videos" class="row">
+                <div class="video col">
+                    <picture class="video_thumb">
+                        <source srcset="assets/video-gatesjobs_560x374.png">
+                        <img src="assets/video-gatesjobs_560x374.png" alt="Video thumbnail" />
+                    </picture>
+                    <h4 class="video_name">@01:07:45 The tfj tu utjf t fu ufvyu uy ygyu uguyyugyuguy</h4>
+                    <div class="video_tags"><span class="tag"><i class="fas fa-tag"></i> 2 people tagged</span>
+                        <span class="tag"><i class="fas fa-share"></i> 102</span></div>
+                    <div class="video_actions">
+                        <span class="button">
+                            <i class="fas fa-magnet"></i> Embed
+                        </span>
+                        <span class="button" href="#">
+                            <i class="fas fa-share"></i> Share
+                        </span>
+                    </div>
+                </div>
+                <div class="video col">
+                    <picture class="video_thumb">
+                        <source srcset="assets/video-fallout_560x374.png">
+                        <img src="assets/video-fallout_560x374.png" alt="Video thumbnail" />
+                    </picture>
+                    <h4 class="video_name">@01:07:45 The tfj tu utjf t fu ufvyu uy ygyu uguyyugyuguy</h4>
+                    <div class="video_tags"><span class="tag"><i class="fas fa-tag"></i> 2 people tagged</span>
+                        <span class="tag"><i class="fas fa-share"></i> 102</span></div>
+                    <div class="video_actions">
+                        <span class="button">
+                            <i class="fas fa-magnet"></i> Embed
+                        </span>
+                        <span class="button" href="#">
+                            <i class="fas fa-share"></i> Share
+                        </span>
+                    </div>
+                </div>
+                <div class="video col">
+                    <picture class="video_thumb">
+                        <source srcset="assets/video-ronconway_560x374.png">
+                        <img src="assets/video-ronconway_560x374.png" alt="Video thumbnail" />
+                    </picture>
+                    <h4 class="video_name">@01:07:45 The tfj tu utjf t fu ufvyu uy ygyu uguyyugyuguy</h4>
+                    <div class="video_tags"><span class="tag"><i class="fas fa-tag"></i> 2 people tagged</span>
+                        <span class="tag"><i class="fas fa-share"></i> 102</span></div>
+                    <div class="video_actions">
+                        <span class="button">
+                            <i class="fas fa-magnet"></i> Embed
+                        </span>
+                        <span class="button" href="#">
+                            <i class="fas fa-share"></i> Share
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <h4 class="text-center">ClipMine works greart for sharing and embeddding recorder game sessions and
+                tutorials,talk shows</h4>
+        </div>
+        <div id="features">
+            <h2 class="section_title text-center">
+                Features
+            </h2>
+            <div class="row">
+                <div class="col">
+                    <picture>
+                        <source sizes="(max-width:767px) 100%,(min-width:768px) 30%" srcset="assets/home-embedding_140x116.png 140w,assets/home-embedding_216x120.png 216w,assets/home-embedding_280x232.png 280w,assets/home-embedding_432x240.png 432w">
+                        <img src="assets/home-embedding_280x232.png" srcset="assets/home-embedding_140x116.png 140w,assets/home-embedding_216x120.png 216w,assets/home-embedding_280x232.png 280w,assets/home-embedding_432x240.png 432w">
+                    </picture>
+                    <h3 class="feature_title text-center">
+                        Embedding
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor justo.
+                        Pellentesque porta nulla a scelerisque dignissim. Curabitur pretium euismod nisi at posuere.
+                        Curabitur convallis neque non tortor luctus, in blandit nulla dignissim. Vestibulum molestie
+                        diam vel consectetur luctus. Praesent dictum dapibus diam eget posuere. Integer commodo congue
+                        massa nec mattis. Morbi maximus, justo vel finibus ullamcorper, lorem massa lacinia enim, eu
+                        luctus orci orci nec tortor.
+                    </p>
+                </div>
+                <div class="col">
+                    <picture>
+                        <source sizes="(max-width:767px) 100%,(min-width:768px) 30%" srcset="assets/home-embedding_168x114.png 168w,assets/home-sharing_216x120.png 216w,assets/home-sharing_368x228.png 368w,assets/home-sharing_432x240.png 432w">
+                        <img src="assets/home-sharing_280x232.png" srcset="assets/home-embedding_168x114.png 168w,assets/home-sharing_216x120.png 216w,assets/home-sharing_368x228.png 368w,assets/home-sharing_432x240.png 432w">
+                    </picture>
+                    <h3 class="feature_title text-center">
+                        Sharing
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor justo.
+                        Pellentesque porta nulla a scelerisque dignissim. Curabitur pretium euismod nisi at posuere.
+                        Curabitur convallis neque non tortor luctus, in blandit nulla dignissim. Vestibulum molestie
+                        diam vel consectetur luctus. Praesent dictum dapibus diam eget posuere. Integer commodo congue
+                        massa nec mattis. Morbi maximus, justo vel finibus ullamcorper, lorem massa lacinia enim, eu
+                        luctus orci orci nec tortor.
+                    </p>
+                </div>
+                <div class="col">
+                    <picture>
+                        <source sizes="(max-width:767px) 100%,(min-width:768px) 30%" srcset="assets/home-tagging_208x113.png 208w,assets/home-tagging_418x226.png 418w">
+                        <img src="assets/home-tagging_208x113.png">
+                    </picture>
+                    <h3 class="feature_title text-center">
+                        Tagging
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor justo.
+                        Pellentesque porta nulla a scelerisque dignissim. Curabitur pretium euismod nisi at posuere.
+                        Curabitur convallis neque non tortor luctus, in blandit nulla dignissim. Vestibulum molestie
+                        diam vel consectetur luctus. Praesent dictum dapibus diam eget posuere. Integer commodo congue
+                        massa nec mattis. Morbi maximus, justo vel finibus ullamcorper, lorem massa lacinia enim, eu
+                        luctus orci orci nec tortor.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="benefits">
+            <h2 class="section_title text-center">
+                Benefits
+            </h2>
+            <div class="column" id="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src="assets/benefits/index-benefit-analytics_166x166.png" alt="" />
+                    </div>
+                    <div class="benefit-data">
+                        <h2 class="benefit-title">
+                            Analytics
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor justo.
+                            Pellentesque porta nulla a scelerisque dignissim.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src="assets/benefits/index-benefit-personal_166x166.png" alt="" />
+                    </div>
+                    <div class="benefit-data">
+                        <h2 class="benefit-title">
+                            Personal
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor justo.
+                            Pellentesque porta nulla a scelerisque dignissim.
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src="assets/benefits/index-benefit-engagement_166x166.png" alt="" />
+                    </div>
+                    <div class="benefit-data">
+                        <h2 class="benefit-title">
+                            Engagement
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor justo.
+                            Pellentesque porta nulla a scelerisque dignissim.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="collections">
+            <h2 class="section-title text-center">ClipMine Video Collections</h2>
+            <div class="collection-row">
+                <div class="col">
+                    <picture>
+                        <source sizes="(min-width:768px) 40%,(max-width:767px) 100%" srcset="assets/collections/collection-startup_460x184.png 460w,assets/collections/collection-startup_920x368.png 920w" />
+                        <img src="assets/collections/collection-startup_460x184.png" />
+                    </picture>
+                    <div class="overlay">
+                        <h3 class="text-center">STARTUPS</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <picture>
+                        <source sizes="(min-width:768px) 40%,(max-width:767px) 100%" srcset="assets/collections/collection-ml_461x184.png 460w,assets/collections/collection-ml_922x368.png 920w" />
+                        <img src="assets/collections/collection-ml_460x184.png" />
+                    </picture>
+                    <div class="overlay">
+                        <h3 class="text-center">MACHINE LEARNING</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="customers" class="bg-gray">
+            <h2 class="section_title text-center">Who's using ClipMine</h2>
+            <div class="customer-grid">
+                <div class="customer">
+                    <picture>
+                        <source sizes="100%" srcset="assets/partners/partner-500startups_430x188.png 430w,assets/partners/partner-500startups_215x94.png 215w" />
+                        <img src="assets/partners/partner-500startups_430x188.png" />
+                    </picture>
+                </div>
+
+                <div class="customer">
+                    <picture>
+                        <source sizes="100%" srcset="assets/partners/partner-blackbox_430x188.png 430w,assets/partners/partner-blackbox_215x94.png 215w" />
+                        <img src="assets/partners/partner-blackbox_430x188.png" />
+                    </picture>
+                </div>
+
+                <div class="customer">
+                    <picture>
+                        <source sizes="100%" srcset="assets/partners/partner-bothsides_430x188.png 430w,assets/partners/partner-bothsides_215x94.png 215w" />
+                        <img src="assets/partners/partner-bothsides_430x188.png" />
+                    </picture>
+                </div>
+                <div class="customer">
+                    <picture>
+                        <source sizes="100%" srcset="assets/partners/partner-cv_430x188.png 430w,assets/partners/partner-cv_215x94.png 215w" />
+                        <img src="assets/partners/partner-cv_430x188.png" />
+                    </picture>
+                </div>
+                <div class="customer">
+                    <picture>
+                        <source sizes="100%" srcset="assets/partners/partner-ucf_430x188.png 430w,assets/partners/partner-ucf_215x94.png 215w" />
+                        <img src="assets/partners/partner-ucf_430x188.png" />
+                    </picture>
+                </div>
+
+                <div class="customer">
+                    <picture>
+                        <source sizes="100%" srcset="assets/partners/partner-yc_430x188.png 430w,assets/partners/partner-yc_215x94.png 215w" />
+                        <img src="assets/partners/partner-yc_430x188.png" />
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <div id="tag">
+            <h2 class="section-title text-center">What would you like to tag?</h2>
+            <div class="tag-search" style="display:flex; justify-content:center">
+                <div style="border:1px solid #ccc;border-radius:5px;display: inline">
+                    <input type="text" style="padding:5px;border:0;border-radius: 5px">
+                    <span style="padding:5px 10px;background:#428bca;color:#fff;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Tag now</span>
+                    </input>
+                </div>
+            </div>
+        </div>
+        <div id="platforms" class="bg-gray">
+            <h2 class="section-title text-center">Supported Platforms</h2>
+            <div class="platforms-row">
+                <img src="assets/platforms/platform-dailymotion_230x100.png" />
+                <img src="assets/platforms/platform-html5_230x100.png" />
+                <img src="assets/platforms/platform-vimeo_230x100.png" />
+                <img src="assets/platforms/platform-youtube_230x100.png" />
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div style="background:#555;padding: 5px" class="text-center">
+            <span><a href="#">Contact</a></span>
+            <span><a href="#">About Clipmine</a></span>
+            <span><a href="#">Blog</a></span>
+            <span><a href="#">Help Center</a></span>
+        </div>
+        <div style="background:#222;padding: 5px" class="text-center">
+            2018-yiygiyfu yjjt ht
+        </div>
+    </footer>
+</body>
+
+</html>
